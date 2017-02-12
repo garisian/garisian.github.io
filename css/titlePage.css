@@ -1,0 +1,81 @@
+/* ========= Overall ========= */
+header
+{
+	text-align: center;
+	background:#18BC9C;
+	color: white;
+}
+
+header .container
+{
+	padding-top:100px;
+    padding-bottom: :50px;
+}
+
+
+/* ========= Everything involving star image inbetween Name and Description =========*/
+
+hr.star-light {
+    padding: 0;
+    border: none;
+    border-top: solid 5px;
+    text-align: center;
+    max-width: 250px;
+    margin: 25px auto 30px;
+}
+
+/* Creates a gray star */
+hr.starImage:after {
+  content: "\f005";
+  font-family: FontAwesome;
+  display: inline-block;
+  position: relative;
+  top: -0.8em;
+  font-size: 2em;
+  padding: 0 0.25em;
+}
+
+/* Creates Horizonal Line Across The Page */
+hr.starImage {
+  border-color: white;
+}
+
+/* Adds A Background Color To The Star*/
+hr.starImage:after {
+  /* Color of the back of star */
+  /* background-color: #18BC9C; */
+
+  /* Color of the star */
+  color: white;
+}
+
+
+/*========= Everything to do with the Name and introduction Text ========= */
+
+header .intro .name {
+  display: block;
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 2em;
+}
+header .intro .skills {
+  font-size: 1.25em;
+  font-weight: 200;
+}
+
+
+/*========= CSS adjusting for tablets and phones =========*/
+
+@media (min-width: 768px) {
+  header .container {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+  header .intro .name {
+    font-size: 4.75em;
+  }
+  header .intro .skills {
+    font-size: 1.75em;
+  }
+}
