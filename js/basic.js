@@ -49,8 +49,20 @@ $(window).load(function(){
 });//]]>  
 
 /* To Show The Blogs On Each Project */
-function myFunction(id) {
-    var popup = document.getElementById(id);
+function myFunction(activID, listOfIDs) {
+	/*$('.popup span').hide();*/
+    var popup = document.getElementById(activID);
+    /*var splitList = listOfIDs.split("/");
+    for (counter = 0; counter < splitList.length; counter++) {
+    	if(splitList[counter] == activeID)
+    	{
+    		popup.classList.toggle("show");
+    		continue
+    	}
+
+    }*/
+
     popup.classList.toggle("show");
+    
 }
 
