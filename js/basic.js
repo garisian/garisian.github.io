@@ -49,7 +49,7 @@ $(window).load(function(){
 });//]]>  
 
 /* To Show The Blogs On Each Project */
-function myFunction(activID, listOfIDs) {
+function myFunction(activID) {
 	/*$('.popup span').hide();*/
     var popup = document.getElementById(activID);
     /*var splitList = listOfIDs.split("/");
