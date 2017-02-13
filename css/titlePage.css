@@ -11,7 +11,10 @@ header .container
 	 min-height: 100vh;
 }
 
-
+section h3
+{
+  text-align: center;
+}
 /* ========= Everything involving star image inbetween Name and Description =========*/
 
 hr.starImage {

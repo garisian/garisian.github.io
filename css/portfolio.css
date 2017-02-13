@@ -1,3 +1,8 @@
+#portfolio
+{
+   min-height: 100vh;
+}
+
 
 /* ========= Everything involving star image underneath "Portfolio" =========*/
 
@@ -69,7 +74,7 @@ section h2 {
 .popup .popuptext {
     visibility: hidden;
     width: 40vh;
-    background-color: #555;
+    background-color: #b3d9ff;
     color: #fff;
     text-align: center;
     border-radius: 6px;
