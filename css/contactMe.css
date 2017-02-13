@@ -1,0 +1,72 @@
+#contactMe
+{
+    min-height: 100vh;
+   	background: white;
+	color: black;
+	padding-top: 5%;
+}
+
+@media (min-width: 768px) {
+  header .container {
+    padding-top: 5%;
+    padding-bottom: 100px;
+  }
+  header .intro .name {
+    font-size: 4.75em;
+  }
+  header .intro .skills {
+    font-size: 1.75em;
+  }
+}
+
+
+/* Fancy art name In Get In Touch Section */
+.mailbox
+{
+   height: 100vh;
+   /* Following elements fix the background pic and give the overlay scrolling effect */
+   background-attachment: fixed;
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+}
+
+
+/* Positioning of the table of First Name, Last Name, etc*/
+#getInTouchTable
+{   width:50%;
+    height:50%;
+    /* background-color:#d9d9d9; */
+    position:relative;
+    margin-left:-19vw; /* half of width */
+    left:50%;
+}
+
+/* Make Elements in Get In Touch transparent to background image. Lighter Transparency*/
+input[type="text"]
+{
+  color: black;
+    background: transparent;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";       /* IE 8 */
+    filter: alpha(opacity=50);  /* IE 5-7 */
+    -moz-opacity: 0.5;          /* Netscape */
+    -khtml-opacity: 0.5;        /* Safari 1.x */
+    opacity: 0.5;               /* Good browsers */
+}
+
+/* Make TextArea in Get In Touch transparent to background image. Lighter Transparency*/
+textarea
+{
+    background: transparent;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";       /* IE 8 */
+    filter: alpha(opacity=50);  /* IE 5-7 */
+    -moz-opacity: 0.5;          /* Netscape */
+    -khtml-opacity: 0.5;        /* Safari 1.x */
+    opacity: 0.5;               /* Good browsers */
+
+}
+
+div.mailbox label
+{
+  color: blue;
+}
