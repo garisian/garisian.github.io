@@ -39,11 +39,10 @@ $comments = $_POST['message'];
     $to = 'garisian22@gmail.com';
     $subject = 'Email From Personal Profile';
     $message = 'FROM: '.$first_name." ".$last_name.' Email: '.$email_from.'Message: '.$comments;
-    $headers = 'From: Website Yo' . "\r\n";
+    $headers = 'From: Website To' . "\r\n";
 
     
     mail($to, $subject, $message, $headers); //This method sends the mail.
    echo "Your email was sent! $first_name"; // success message
   }
-
 ?>

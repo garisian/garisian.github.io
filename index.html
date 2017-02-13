@@ -1,137 +1,137 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="UTF-8">
-		<title> Garisian's Portfolio </title>
-		<link rel="stylesheet" href="bootstrap-4.0.0-alpha.6-dist/css/bootstrap.min.css">
-		<link rel="stylesheet" href="css/style.css">
-		<link rel="stylesheet" href="css/titlePage.css">
-		<link rel="stylesheet" href="css/menuBar.css">
-		<link rel="stylesheet" href="css/portfolio.css">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <title> Garisian's Portfolio </title>
+        <link rel="stylesheet" href="bootstrap-4.0.0-alpha.6-dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/titlePage.css">
+        <link rel="stylesheet" href="css/menuBar.css">
+        <link rel="stylesheet" href="css/portfolio.css">
         <link rel="stylesheet" href="css/aboutMe.css">
         <link rel="stylesheet" href="css/contactMe.css">
         <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js'></script>
         <script type='text/javascript' src="js/basic.js"></script>
         <script src="http://code.jquery.com/jquery-latest.js"></script>
-	</head>
+
+        <!-- To deal with the mailing -->
+        <script>
+            $(document).ready(function(){
+                $('#submit').click(function(){
+                    $.post("php/sendMail.php", $("#mycontactform").serialize(),  function(response) {   
+                        $('#success').html(response);
+                        //$('#success').hide('slow');
+                    });
+                    return false;
+                });
+            });
+        </script>
+    </head>
 
     <body>
 
-    	<!-- The Front Section With Name, Description, And Penguin -->
-    	<header>
-            <!-- To deal with the mailing -->
-            <script>
-                $(document).ready(function(){
-                    $('#submit').click(function(){
-                        $.post("php/sendEmail.php", $("#mycontactform").serialize(),  function(response) {   
-                            $('#success').html(response);
-                            //$('#success').hide('slow');
-                        });
-                        return false;
-                    });
-                });
-            </script>
-
-    		<div class="container">
-    			<div class="row">
-    				<div class="col-lg-12">
-    					<img class="img-responsive" src="images/penguinProfile.png" alt="NO PENGUIN HAHA">
-    					<div class="intro">
-    						<span class="name">Garisian Kana </span>
-    						<hr class="starImage">
-    						<span class="skills">Software Developer  -  Database Engineer  -  Penguin Fanatic</span>
-    					</div>
-    				</div>
-    			</div>
-    		</div>
-    		<!--
-	        <nav class="navigationMenu">
+        <!-- The Front Section With Name, Description, And Penguin -->
+        <header>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <img class="img-responsive" src="images/penguinProfile.png" alt="NO PENGUIN HAHA">
+                        <div class="intro">
+                            <span class="name">Garisian Kana </span>
+                            <hr class="starImage">
+                            <span class="skills">Software Developer  -  Database Engineer  -  Penguin Fanatic</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--
+            <nav class="navigationMenu">
                 <a href="#blog" class="smoothScroll">Blog</a>
-	            <br class="clearLeft" />
-	        </nav>
-	    	-->
-    	</header>
+                <br class="clearLeft" />
+            </nav>
+            -->
+        </header>
 
         <!-- Portfolio Section -->
-    	<section id="portfolio">
-    		<div class="container">
-    			<div class="row">
-    				<div class="col-lg-12 textCenter">
-    					<h2>Portfolio</h2>
-    					<hr class="grayStar">
+        <section id="portfolio">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 textCenter">
+                        <h2>Portfolio</h2>
+                        <hr class="grayStar">
                         <span id="pokePenguin">Poke A Penguin. I Dare You</span>
-    			</div>
-    		</div>
+                </div>
+            </div>
 
-			<div class="row">
+            <div class="row">
                 <div class="popup col-md-4 col-xs-6">
-                	<!-- Book Me Now-->
-                	<span class="popuptext" id="myPopup0">
-                		<a id="portfolioLinks" href="http://tinyurl.com/zlykjbt">
-                			http://tinyurl.com/zlykjbt
-                		</a>
-                	</span>
+                    <!-- Book Me Now-->
+                    <span class="popuptext" id="myPopup0">
+                        <a id="portfolioLinks" href="http://tinyurl.com/zlykjbt">
+                            http://tinyurl.com/zlykjbt
+                        </a>
+                    </span>
                     <a href="#portfolioModal1">
                         <img src="images/penguinProfile.png" class="img-responsive" onclick="myFunction('myPopup0')" alt="Image Not Available">
                     </a>
                 </div>
                 <div class="popup col-md-4 col-xs-6">
-                	<!-- Old Portfolio -->
-                	<span class="popuptext" id="myPopup1">
-                		<a id="portfolioLinks" href="http://tinyurl.com/hmku5ts">
-                			http://tinyurl.com/hmku5ts
-                		</a>
-                	</span>
+                    <!-- Old Portfolio -->
+                    <span class="popuptext" id="myPopup1">
+                        <a id="portfolioLinks" href="http://tinyurl.com/hmku5ts">
+                            http://tinyurl.com/hmku5ts
+                        </a>
+                    </span>
                     <a href="#portfolioModal2">
                         <img src="images/penguinProfile.png" class="img-responsive" onclick="myFunction('myPopup1')" alt="Image Not Available">
                     </a>
                 </div>
                 <div class="popup col-md-4 col-xs-6">
-                	<!-- Facial Recognition -->
-                	<span class="popuptext" id="myPopup2">
-                		<a id="portfolioLinks" href="http://tinyurl.com/hg5r7tz">
-                			http://tinyurl.com/hg5r7tz
-                		</a>
-                	</span>
+                    <!-- Facial Recognition -->
+                    <span class="popuptext" id="myPopup2">
+                        <a id="portfolioLinks" href="http://tinyurl.com/hg5r7tz">
+                            http://tinyurl.com/hg5r7tz
+                        </a>
+                    </span>
                     <a href="#portfolioModal3">
                         <img src="images/penguinProfile.png" class="img-responsive" onclick="myFunction('myPopup2')" alt="Image Not Available">
                     </a>
                 </div>
                 <div class="popup col-md-4 col-xs-6">
-                	<!-- Java BattleShip-->
-                	<span class="popuptext" id="myPopup3">
-                		<a id="portfolioLinks" href="http://tinyurl.com/hfjcaht">
-                			http://tinyurl.com/hfjcaht
-                		</a>
-                	</span>
+                    <!-- Java BattleShip-->
+                    <span class="popuptext" id="myPopup3">
+                        <a id="portfolioLinks" href="http://tinyurl.com/hfjcaht">
+                            http://tinyurl.com/hfjcaht
+                        </a>
+                    </span>
                     <a href="#portfolioModal4">
                         <img src="images/penguinProfile.png" class="img-responsive" onclick="myFunction('myPopup3')" alt="Image Not Available">
                     </a>
                 </div>
                 <div class="popup col-md-4 col-xs-6">
-                	<!-- This Website/Code -->
-                	<span class="popuptext" id="myPopup4">
-                		<a id="portfolioLinks" href="http://tinyurl.com/h2c8646">
-                			http://tinyurl.com/h2c8646
-                		</a>
-                	</span>
+                    <!-- This Website/Code -->
+                    <span class="popuptext" id="myPopup4">
+                        <a id="portfolioLinks" href="http://tinyurl.com/h2c8646">
+                            http://tinyurl.com/h2c8646
+                        </a>
+                    </span>
                     <a href="#portfolioModal5">
                         <img src="images/penguinProfile.png" class="img-responsive" onclick="myFunction('myPopup4')" alt="Image Not Available">
                     </a>
                 </div>
                 <div class="popup col-md-4 col-xs-6">
-                	<!-- Penguins! -->
-                	<span class="popuptext" id="myPopup5">
-                		<a id="portfolioLinks" href="http://tinyurl.com/3w9klgq">
-                			http://tinyurl.com/3w9klgq
-                		</a>
-                	</span>
+                    <!-- Penguins! -->
+                    <span class="popuptext" id="myPopup5">
+                        <a id="portfolioLinks" href="http://tinyurl.com/3w9klgq">
+                            http://tinyurl.com/3w9klgq
+                        </a>
+                    </span>
                     <a href="#portfolioModal6">
                         <img src="images/penguinProfile.png" class="img-responsive" onclick="myFunction('myPopup5')" alt="Image Not Available">
                     </a>
                 </div>
             </div>
-    	</section>
+        </section>
 
 
         <!-- About Me Section -->
@@ -186,36 +186,36 @@
                 </div>
                 <form action="" method="post" id="mycontactform" >
                      <table id="getInTouchTable" width="450px">
-                            <tr>
-                                <td valign="top"><label class="getInTouchElements" for="first_name">First Name:</label></td>
-                                <td valign="top"><input class="getInTouchElements" type="text" name="first_name" id="first_name" /></td>
-                            </tr>
-                            <tr>
-                                <td valign="top"><label class="getInTouchElements" for="last_name">Last Name:</label></td>
-                                <td valign="top"><input class="getInTouchElements" type="text" name="last_name" id="last_name" /></td>
-                            </tr>
-                            <tr>
-                                <td valign="top"><label class="getInTouchElements" for="telephone">Telephone:</label></td>
-                                <td valign="top"><input class="getInTouchElements" type="text" name="telephone" id="telephone" /></td>
-                            </tr>
-                            <tr>
-                                <td valign="top"><label class="getInTouchElements" for="email">Email:</label></td>
-                                <td valign="top"><input class="getInTouchElements" type="text" name="email" id="email" /></td>
-                            </tr>
-                            <tr>
-                                <td valign="top"><label class="getInTouchElements" for="message">Message:</label></td>
-                                <td valign="top"><textarea class="transparentContactmeBox" name="message" id="message" maxlength="1000" cols="42" 
-                            rows="6"></textarea></td>
-                            </tr>
-                            <tr>
-                                <td valign="top" colspan="2"><input type="button" value="Send" id="submit" /><div id="success" style="color:red;"></div></td>
-                            </tr>
-                        </table>
+                        <tr>
+                            <td valign="top"><label class="getInTouchElements" for="first_name">First Name:</label></td>
+                            <td valign="top"><input class="getInTouchElements" type="text" name="first_name" id="first_name" /></td>
+                        </tr>
+                        <tr>
+                            <td valign="top"><label class="getInTouchElements" for="last_name">Last Name:</label></td>
+                            <td valign="top"><input class="getInTouchElements" type="text" name="last_name" id="last_name" /></td>
+                        </tr>
+                        <tr>
+                            <td valign="top"><label class="getInTouchElements" for="telephone">Telephone:</label></td>
+                            <td valign="top"><input class="getInTouchElements" type="text" name="telephone" id="telephone" /></td>
+                        </tr>
+                        <tr>
+                            <td valign="top"><label class="getInTouchElements" for="email">Email:</label></td>
+                            <td valign="top"><input class="getInTouchElements" type="text" name="email" id="email" /></td>
+                        </tr>
+                        <tr>
+                            <td valign="top"><label class="getInTouchElements" for="message">Message:</label></td>
+                            <td valign="top"><textarea class="transparentContactmeBox" name="message" id="message" maxlength="1000" cols="42" rows="6"></textarea></td>
+                        </tr>
+                        <tr>
+                            <td valign="top" colspan="2"><input type="button" value="Send" id="submit" /><div id="success" style="color:red;"></div></td>
+                        </tr>
+                    </table>
                 </form>
-            </div>
+            <div>
         </section>
-		<!--<button class="btn-primary"> CLICK HERE </button>-->
-		<a name="blog"></a>
+            
+        <!--<button class="btn-primary"> CLICK HERE </button>-->
+        <a name="blog"></a>
     </body>
 </html>
 
