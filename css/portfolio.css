@@ -4,6 +4,16 @@
 }
 
 
+#pokePenguin
+{  
+  display: block;
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 2em;
+  font-size: 1.25em;
+}
+
 /* ========= Everything involving star image underneath "Portfolio" =========*/
 
 hr.grayStar {
