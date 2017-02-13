@@ -1,0 +1,16 @@
+.randomFillSpace
+{
+	height:100vh;
+}
+
+.textCenter
+{
+	text-align: center;
+}
+
+.middle
+{
+	display: block;
+    margin-left: auto;
+    margin-right: auto
+}

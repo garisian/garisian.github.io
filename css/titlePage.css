@@ -8,14 +8,13 @@ header
 
 header .container
 {
-	padding-top:100px;
-    padding-bottom: :50px;
+	 min-height: 100vh;
 }
 
 
 /* ========= Everything involving star image inbetween Name and Description =========*/
 
-hr.star-light {
+hr.starImage {
     padding: 0;
     border: none;
     border-top: solid 5px;
@@ -42,8 +41,9 @@ hr.starImage {
 
 /* Adds A Background Color To The Star*/
 hr.starImage:after {
+
   /* Color of the back of star */
-  /* background-color: #18BC9C; */
+  background-color: #18BC9C;
 
   /* Color of the star */
   color: white;

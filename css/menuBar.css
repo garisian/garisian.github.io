@@ -1,0 +1,15 @@
+/* Mainly used for the menu bar and it's positioning at the top of the page */
+.navigationMenu 
+{
+  /* z-index to display on top of timeline */
+  z-index: 1000;
+
+  position: relative;
+  top:45vh;
+  margin-top: 5px;
+  padding: 24px;
+  text-align: center;
+  font-family: Raleway;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+  background: #3fa46a;
+}
