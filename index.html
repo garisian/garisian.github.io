@@ -122,7 +122,7 @@
                 <div class="popup col-md-4 col-xs-6">
                     <!-- Penguins! -->
                     <span class="popuptext" id="myPopup5">
-                        <a style="outline: none;" id="portfolioLinks" href="http://tinyurl.com/3w9klgq">
+                        <a id="portfolioLinks" href="http://tinyurl.com/3w9klgq">
                             What is A Penguin?
                         </a>
                     </span>
@@ -175,6 +175,45 @@
             </div>
         </section>
 
+        <!-- Contact Me Section -->
+        <section id="contactMe">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 textCenter">
+                        <h2>Contact Me</h2>
+                        <hr class="grayStar">
+                    </div>
+                </div>
+                <form action="" method="post" id="mycontactform" >
+                     <table id="getInTouchTable" width="450px">
+                        <tr>
+                            <td valign="top"><label class="getInTouchElements" for="first_name">First Name:</label></td>
+                            <td valign="top"><input class="getInTouchElements" type="text" name="first_name" id="first_name" /></td>
+                        </tr>
+                        <tr>
+                            <td valign="top"><label class="getInTouchElements" for="last_name">Last Name:</label></td>
+                            <td valign="top"><input class="getInTouchElements" type="text" name="last_name" id="last_name" /></td>
+                        </tr>
+                        <tr>
+                            <td valign="top"><label class="getInTouchElements" for="telephone">Telephone:</label></td>
+                            <td valign="top"><input class="getInTouchElements" type="text" name="telephone" id="telephone" /></td>
+                        </tr>
+                        <tr>
+                            <td valign="top"><label class="getInTouchElements" for="email">Email:</label></td>
+                            <td valign="top"><input class="getInTouchElements" type="text" name="email" id="email" /></td>
+                        </tr>
+                        <tr>
+                            <td valign="top"><label class="getInTouchElements" for="message">Message:</label></td>
+                            <td valign="top"><textarea class="transparentContactmeBox" name="message" id="message" maxlength="1000" cols="42" rows="6"></textarea></td>
+                        </tr>
+                        <tr>
+                            <td valign="top" colspan="2"><input type="button" value="Send" id="submit" /><div id="success" style="color:red;"></div></td>
+                        </tr>
+                        <p style="color:red;">Note: Github hosting is static, so send button won't work. Functionality exists and can be verified by downloading this code and running on localhost etc. </p>
+                    </table>
+                </form>
+            <div>
+        </section>
             
         <!--<button class="btn-primary"> CLICK HERE </button>-->
         <a name="blog"></a>
