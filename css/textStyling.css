@@ -1,0 +1,36 @@
+div.mainTitle 
+{
+    height: 10em;
+    position: relative;
+}
+
+div.mainTitle p 
+{
+    margin: 0;
+    background: yellow;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Remove spacing before any div */
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+#myAnimation {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  background-color: red;
+}
+
+#myContainer {
+  width: 100vw ;
+  height: 100vh ;
+  position: relative;
+  background: yellow;
+}
