@@ -7,7 +7,6 @@ div.mainTitle
 div.mainTitle p 
 {
     margin: 0;
-    background: yellow;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -21,14 +20,27 @@ html, body {
     padding: 0;
 }
 
+/* Characteristics of a single moving element */
 #myAnimation {
   width: 50px;
   height: 50px;
   position: absolute;
-  background-color: red;
+  background-image: url("./../img/alphabet/a.png");
+  background-size: contain;
 }
 
-#myContainer {
+/* Characteristics of a single moving element */
+#myAnimationTest {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  background-image: url("./../img/alphabet/b.png");
+  background-size: contain;
+}
+
+/* Background which will contain all the characters */
+#myContainer 
+{
   width: 100vw ;
   height: 100vh ;
   position: relative;
