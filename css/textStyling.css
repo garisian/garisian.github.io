@@ -29,14 +29,7 @@ html, body {
   background-size: contain;
 }
 
-/* Characteristics of a single moving element */
-#myAnimationTest {
-  width: 50px;
-  height: 50px;
-  position: absolute;
-  background-image: url("./../img/alphabet/b.png");
-  background-size: contain;
-}
+
 
 /* Background which will contain all the characters */
 #myContainer 

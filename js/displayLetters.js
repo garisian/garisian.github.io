@@ -1,5 +1,5 @@
 // List of all the categories displayed on main page
-var categories = [
+/*var categories = [
     "github",
     "resume",
     "sports",
@@ -7,6 +7,10 @@ var categories = [
     "how it's done",
     "garisian kana",
     "garisian kana"
+];*/
+var categories = [
+	"a",
+	"b"
 ];
 
 // Letter To Path List
@@ -18,8 +22,8 @@ var charDict = new Object();
 
 // list of displayed letters
 var displayedLetters = [];
-var singleLetter = {left:90, top: 90, letter:'a', xDirection:1, yDirection:1};
-var singleLetter2 = {left:90, top: 90, letter:'b', xDirection:1, yDirection:0, name:"something"};
+var singleLetter = {left:90, top: 90, letter:'a', xDirection:1, yDirection:1, name:"myAnimation"};
+var singleLetter2 = {left:90, top: 90, letter:'b', xDirection:1, yDirection:0, name:"myAnimationTest"};
 displayedLetters.push(singleLetter)
 displayedLetters.push(singleLetter2)
 
@@ -51,16 +55,23 @@ $(window).load(function(){
 	    //alert('key is : \"' + key + '\" and value is : \"'+ charDict[key])+"\"";
 	}
 
-	myMove();
-/*
+	var css = document.createElement("style");
+	css.type = "text/css";
+	css.innerHTML = "#myAnimationTest { width: 50px;height: 50px;position: absolute;background-image: url('img/alphabet/b.png');background-size: contain; }";
+
+	document.getElementsByTagName('head')[0].appendChild(css);
+	//document.head.appendChild(css);
+
+
 	var iDiv = document.createElement('div');
 	iDiv.id = 'myAnimationTest';
-	iDiv.className = '';
-	document.getElementsByTagName('body')[0].appendChild(iDiv);
+	document.getElementsByTagName('div')[0].appendChild(iDiv);
 
 	iDiv.style.top = 90 + 'px'; 
-	iDiv.style.left = 90 + 'px'; */
+	iDiv.style.left = 90 + 'px'; 
 
+
+	myMove();
 
  });
 
@@ -97,23 +108,21 @@ function myMove()
 {
 	//var elem = document.getElementById("myAnimation");   
 	var pos = 0;
-	var width = window.innerWidth|| document.documentElement.clientWidth|| document.body.clientWidth;
-	var height = window.innerHeight|| document.documentElement.clientHeight|| document.body.clientHeight;
 
 	var id = setInterval(frame, 10);
 
  	
 	function frame() 
 	{
+		var width = window.innerWidth|| document.documentElement.clientWidth|| document.body.clientWidth;
+	var height = window.innerHeight|| document.documentElement.clientHeight|| document.body.clientHeight;
+
 	  	for (var aLetter = 0; aLetter < displayedLetters.length; aLetter++) 
 		{
-			var elem = document.getElementById("myAnimation"); 
-			if(displayedLetters[aLetter].letter == 'b')
-			{
-				var elem = document.getElementById("myAnimationTest"); 
-			}
+			var elem = document.getElementById(displayedLetters[aLetter].name); 
+
 			// Deal with the corner/edge cases
-			if (displayedLetters[aLetter].top == height - 50) 
+			if (displayedLetters[aLetter].top > height - 50) 
 			{
 				displayedLetters[aLetter].yDirection = 0;
 			} 
@@ -121,7 +130,7 @@ function myMove()
 			{
 				displayedLetters[aLetter].yDirection = 1;
 			} 
-			if (displayedLetters[aLetter].left == width - 50) 
+			if (displayedLetters[aLetter].left > width - 50) 
 			{
 				displayedLetters[aLetter].xDirection = 0;
 			} 
