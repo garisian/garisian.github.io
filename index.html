@@ -1,5 +1,5 @@
-<!doctype html>
 <html>
+
     <head>
         <title>Garisian Kana</title>
 
@@ -10,34 +10,37 @@
         <meta name="keywords" content="garisian, kana, penguin, bubbletea, brown">
 
         <!-- Styling CSS Scripts -->
-        <link rel="stylesheet" href="css/fullLayout.css">
-        <link rel="stylesheet" href="css/textStyling.css">
-        <link rel="stylesheet" href="css/cubeRotation.css">
+        <link rel="stylesheet" type="text/css" href="css/fullLayout.css">
+        <link rel="stylesheet" type="text/css" href="css/textStyling.css">
+        <link rel="stylesheet" type="text/css" href="css/cubeRotation.css">
+        <script type="text/javascript" src=../js/jquery-3.2.1.min.js></script>
 
         <!-- Javascript Links -->
         <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js'></script>
 
-        <!-- Script to display bouncing letters -->    
-        <!-- <script type='text/javascript' src="js/displayLetters.js"></script>-->
-        
     </head>
-    
-    <body>
-        <div id="mainDiv">
-            <div id="boxDiv">
-                <div id="front"><br><br>Front Side</div>
-                <div id="back"><br><br>Back Side</div>
-                <div id="left"><br><br>Left Side</div>
-                <div id="right"><br><br>Right Side</div>
-                <div id="top">Top Side</div>
-                <div id="bottom">Bottom Side </div>
-            </div>
-        </div>
 
+    <body style="width: 100%; height:100%;">
         <div id ="myContainer">
             <div class=mainTitle >
                 <p>Garisian Title Fix Later</p>
             </div>
         </div>
+    
+        <!-- Wrapper for the cube -->
+        <div id="squareStructure">
+            <div class="cube-0">
+                <!-- A div for each face of the cube -->
+                <div id="front" class="face"></div>
+                <div id="right" class="face"></div>
+                <div id="back" class="face"></div>
+                <div id="left" class="face"></div>
+                <div id="top" class="face"></div>
+                <div id="bottom" class="face"></div>
+            </div>
+        </div>
+
+
     </body>
+
 </html>
