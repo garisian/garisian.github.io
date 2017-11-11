@@ -1,4 +1,4 @@
-#squareStructure{
+#squareStructure-0{
     position: absolute;
     left: 50%;
     top: 50%;
@@ -21,6 +21,7 @@
     100% 
     {
         /* Controls rotation amount on one axis */
+        /* 1--falls down on x axis    2-- rotates counterclockwise on y axis   3--spins clockwise on z axis   */
         transform: rotate3d(1, 1, 1, 360deg);
     }
 }
@@ -30,45 +31,45 @@
 .face 
 {
     position: absolute;
-    width: 200px;
-    height: 200px;
-    border: solid green 3px;
+    width: 50px;
+    height: 50px;
+    border: solid green 1px;
 }
 
 
 /* Transforming every face into their correct positions */
 #front 
 {
-    transform: translateX(-100px) translateY(-100px) translateZ(100px);
+    transform: translateX(-25px) translateY(-25px) translateZ(25px);
     background: rgba(255, 0, 0, 0.5);
 }
 
 #back 
 {
-    transform: translateX(-100px) translateY(-100px) translateZ(-100px);
+    transform: translateX(-25px) translateY(-25px) translateZ(-25px);
     background: rgba(255, 0, 255, 0.5);
 }
 
 #right 
 {
-    transform: translateY(-100px) rotateY(90deg);
+    transform: translateY(-25px) rotateY(90deg);
     background: rgba(255, 255, 0, 0.5);
 }
 
 #left 
 {
-    transform: translateY(-100px) translateX(-200px) rotateY(90deg);
+    transform: translateY(-25px) translateX(-50px) rotateY(90deg);
     background: rgba(0, 255, 0, 0.5);
 }
 
 #top 
 {
-    transform: translateX(-100px) translateY(-200px) rotateX(90deg);
+    transform: translateX(-25px) translateY(-50px) rotateX(90deg);
     background: rgba(0, 255, 255, 0.5);
 }
 
 #bottom 
 {
-    transform: translateX(-100px) rotateX(90deg);
+    transform: translateX(-25px) rotateX(90deg);
     background: rgba(255, 255, 255, 0.5);
 }
