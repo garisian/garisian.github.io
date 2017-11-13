@@ -1,82 +1,26 @@
 $(window).load(function()
 {
-		//makeCube(50, 50, "squareStructure-1", "cube-1");
+	//makeCube(50, 50, "squareStructure-1", "cube-1");
 	makeCubes();
-	moveCubes();
 });
-
-function moveCubes()
-{
-	var pos = 0;
-
-	var id = setInterval(frameIncrement, 10);
-
-	function frameIncrement()
-	{
-		var width = window.innerWidth|| document.documentElement.clientWidth|| document.body.clientWidth;
-		var height = window.innerHeight|| document.documentElement.clientHeight|| document.body.clientHeight;
-
-		var childDivs = document.getElementById('cubeBackground').children;
-		for( i=0; i< childDivs.length; i++ )
-		{
-			var childDiv = childDivs[i];
-			var temp = document.getElementById(childDiv.id);
-		    style = window.getComputedStyle(temp);
-	    	var widthChange = getWidthChange(width, temp.offsetLeft);
-		    // Slowly increment the cube to fall down 
-			if(temp.offsetLeft > width)
-			{
-				deleteCube(childDiv.id);
-			}
-			if(temp.offsetTop > height)
-			{
-				temp.style.top = 0;
-				// Deletes the child once it hits the bottom of the page
-				deleteCube(childDiv.id);
-			}
-			else 
-			{
-				temp.style.top = temp.offsetTop + 5;
-			}
-		}
-	}
-}
-
-function getWidthChange(width, offset)
-{
-	var ratio = (offset/width).toFixed(2);
-	var returnChange = 0;
-
-	if(ratio < 0.5)
-	{
-		return -1*returnChange;
-	}
-	return returnChange;
-}
-
-function deleteCube(cubeID)
-{
- 	var elem = document.getElementById(cubeID);
- 	elem.parentElement.removeChild(elem);
-}
 
 function makeCubes()
 {	
 	var width = window.innerWidth|| document.documentElement.clientWidth|| document.body.clientWidth;
-	var currentVal = 1;
-	window.setInterval(function(){
-		var startWidth = Math.floor(Math.random() * width);
-		makeCube(startWidth, 0, "squareStructure-"+currentVal, "cube-"+currentVal);
-		currentVal++;	
-	}, 100);
+	var height = window.innerHeight|| document.documentElement.clientHeight|| document.body.clientHeight;
+
+	makeCube(width/2, height/2, "squareStructure1", "cube1",0, 400, 0,400);
+	makeCube(width/2, height/2, "squareStructure2", "cube2",0, 400, 400,0);
+	makeCube(width/2, height/2, "squareStructure3", "cube3", -400, 0, 400,0);
+	makeCube(width/2, height/2, "squareStructure4", "cube4",-400, 0, 0, 400);
 }
 
-function makeCube(xCoordinate, yCoordinate, outerStructureName, cubeStructureName, location)
+function makeCube(xCoordinate, yCoordinate, outerStructureName, cubeStructureName,xStart,xEnd,yStart,yEnd)
 {
 	// Create the css for the outer Square
 	var css = document.createElement("style");
 	css.type = "text/css";
-	css.innerHTML = "#"+outerStructureName+" { position: absolute;left:"+xCoordinate+"px;top:"+yCoordinate+"px;perspective: 1500px; }";
+	css.innerHTML = "#"+outerStructureName+" { clip: rect("+(yStart*-1)+"px, "+xEnd+"px, "+yEnd+"px, "+xStart+"px);position: absolute;left:"+xCoordinate+"px;top:"+yCoordinate+"px;perspective: 1500px; }";
 	document.getElementsByTagName('head')[0].appendChild(css);
 
 	// Create the css for the Cube
