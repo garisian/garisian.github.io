@@ -16,7 +16,7 @@ function moveCubes()
 		var width = window.innerWidth|| document.documentElement.clientWidth|| document.body.clientWidth;
 		var height = window.innerHeight|| document.documentElement.clientHeight|| document.body.clientHeight;
 
-		var childDivs = document.getElementById('cubeBackground').children;
+		var childDivs = document.getElementById('cubeBackground2').children;
 		for( i=0; i< childDivs.length; i++ )
 		{
 			var childDiv = childDivs[i];
@@ -63,15 +63,15 @@ function deleteCube(cubeID)
 function makeCubes()
 {	
 	var width = window.innerWidth|| document.documentElement.clientWidth|| document.body.clientWidth;
-	var currentVal = 1;
+	var currentVal = 2;
 	window.setInterval(function(){
 		var startWidth = Math.floor(Math.random() * width);
-		makeCube(startWidth, 0, "squareStructure-"+currentVal, "cube-"+currentVal);
+		makeCube(startWidth, 0, "squareStructure-"+currentVal, "shootingCube-"+currentVal);
 		currentVal++;	
 	}, 100);
 }
 
-function makeCube(xCoordinate, yCoordinate, outerStructureName, cubeStructureName, location)
+function makeCube(xCoordinate, yCoordinate, outerStructureName, cubeStructureName)
 {
 	// Create the css for the outer Square
 	var css = document.createElement("style");
@@ -89,7 +89,7 @@ function makeCube(xCoordinate, yCoordinate, outerStructureName, cubeStructureNam
 	// Create the new div Outer Container of the cube
 	var iDiv = document.createElement('div');
 	iDiv.id = outerStructureName;
-	document.getElementById('cubeBackground').appendChild(iDiv);
+	document.getElementById('cubeBackground2').appendChild(iDiv);
 
 	// Create the new div Cube
 	var iDiv = document.createElement('div');
@@ -100,31 +100,31 @@ function makeCube(xCoordinate, yCoordinate, outerStructureName, cubeStructureNam
 	// Create all 6 sides of cube
 	var iDiv = document.createElement('div');
 	iDiv.className = "face";
-	iDiv.id = 'front';
+	iDiv.id = 'front-cube1';
 	document.getElementById(cubeStructureName).appendChild(iDiv);
 
 	var iDiv = document.createElement('div');
 	iDiv.className = "face";
-	iDiv.id = 'right';
+	iDiv.id = 'right-cube1';
 	document.getElementById(cubeStructureName).appendChild(iDiv);
 
 	var iDiv = document.createElement('div');
 	iDiv.className = "face";
-	iDiv.id = 'back';
+	iDiv.id = 'back-cube1';
 	document.getElementById(cubeStructureName).appendChild(iDiv);
 
 	var iDiv = document.createElement('div');
 	iDiv.className = "face";
-	iDiv.id = 'left';
+	iDiv.id = 'left-cube1';
 	document.getElementById(cubeStructureName).appendChild(iDiv);
 
 	var iDiv = document.createElement('div');
 	iDiv.className = "face";
-	iDiv.id = 'top';
+	iDiv.id = 'top-cube1';
 	document.getElementById(cubeStructureName).appendChild(iDiv);
 
 	var iDiv = document.createElement('div');
 	iDiv.className = "face";
-	iDiv.id = 'bottom';
+	iDiv.id = 'bottom-cube1';
 	document.getElementById(cubeStructureName).appendChild(iDiv);	
 }

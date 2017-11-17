@@ -1,26 +1,33 @@
 $(window).load(function()
 {
-	//makeCube(50, 50, "squareStructure-1", "cube-1");
-	makeCubes();
+	createCubes();
+	shootCubes();
 });
 
-function makeCubes()
-{	
+function createCubes()
+{
 	var width = window.innerWidth|| document.documentElement.clientWidth|| document.body.clientWidth;
-	var height = window.innerHeight|| document.documentElement.clientHeight|| document.body.clientHeight;
-
-	makeCube(width/2, height/2, "squareStructure1", "cube1",0, 400, 0,400);
-	makeCube(width/2, height/2, "squareStructure2", "cube2",0, 400, 400,0);
-	makeCube(width/2, height/2, "squareStructure3", "cube3", -400, 0, 400,0);
-	makeCube(width/2, height/2, "squareStructure4", "cube4",-400, 0, 0, 400);
+	var currentVal = 1;
+	window.setInterval(function(){
+		var cubeType = Math.floor((Math.random() * 4) + 1);
+		var startWidth = Math.floor(Math.random() * width);
+		makeCube(startWidth, 0, "shooting-cube-Structure-"+currentVal, "shooting-cube-"+currentVal);
+		currentVal++;	
+	}, 2000);
 }
 
-function makeCube(xCoordinate, yCoordinate, outerStructureName, cubeStructureName,xStart,xEnd,yStart,yEnd)
+function shootCubes()
+{
+
+}
+
+
+function makeCube(xCoordinate, yCoordinate, outerStructureName, cubeStructureName, location)
 {
 	// Create the css for the outer Square
 	var css = document.createElement("style");
 	css.type = "text/css";
-	css.innerHTML = "#"+outerStructureName+" { clip: rect("+(yStart*-1)+"px, "+xEnd+"px, "+yEnd+"px, "+xStart+"px);position: absolute;left:"+xCoordinate+"px;top:"+yCoordinate+"px;perspective: 1500px; }";
+	css.innerHTML = "#"+outerStructureName+" { position: absolute;left:"+xCoordinate+"px;top:"+yCoordinate+"px;perspective: 1500px; }";
 	document.getElementsByTagName('head')[0].appendChild(css);
 
 	// Create the css for the Cube
@@ -33,7 +40,7 @@ function makeCube(xCoordinate, yCoordinate, outerStructureName, cubeStructureNam
 	// Create the new div Outer Container of the cube
 	var iDiv = document.createElement('div');
 	iDiv.id = outerStructureName;
-	document.getElementById('cubeBackground').appendChild(iDiv);
+	document.getElementById('shootingCubeBackground').appendChild(iDiv);
 
 	// Create the new div Cube
 	var iDiv = document.createElement('div');
@@ -44,31 +51,31 @@ function makeCube(xCoordinate, yCoordinate, outerStructureName, cubeStructureNam
 	// Create all 6 sides of cube
 	var iDiv = document.createElement('div');
 	iDiv.className = "face";
-	iDiv.id = 'front-'+cubeStructureName;
+	iDiv.id = 'front';
 	document.getElementById(cubeStructureName).appendChild(iDiv);
 
 	var iDiv = document.createElement('div');
 	iDiv.className = "face";
-	iDiv.id = 'right-'+cubeStructureName;
+	iDiv.id = 'right';
 	document.getElementById(cubeStructureName).appendChild(iDiv);
 
 	var iDiv = document.createElement('div');
 	iDiv.className = "face";
-	iDiv.id = 'back-'+cubeStructureName;
+	iDiv.id = 'back';
 	document.getElementById(cubeStructureName).appendChild(iDiv);
 
 	var iDiv = document.createElement('div');
 	iDiv.className = "face";
-	iDiv.id = 'left-'+cubeStructureName;
+	iDiv.id = 'left';
 	document.getElementById(cubeStructureName).appendChild(iDiv);
 
 	var iDiv = document.createElement('div');
 	iDiv.className = "face";
-	iDiv.id = 'top-'+cubeStructureName;
+	iDiv.id = 'top';
 	document.getElementById(cubeStructureName).appendChild(iDiv);
 
 	var iDiv = document.createElement('div');
 	iDiv.className = "face";
-	iDiv.id = 'bottom-'+cubeStructureName;
+	iDiv.id = 'bottom';
 	document.getElementById(cubeStructureName).appendChild(iDiv);	
 }
