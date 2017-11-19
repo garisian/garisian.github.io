@@ -31,8 +31,8 @@
 .face 
 {
     position: absolute;
-    width: 400px;
-    height: 400px;
+    width: 200px;
+    height: 200px;
     border: solid green 1px;
 }
 
@@ -40,37 +40,37 @@
 /* Transforming every face into their correct positions */
 #front-cube1
 {
-    transform: translateX(-200px) translateY(-200px) translateZ(200px);
+    transform: translateX(-100px) translateY(-100px) translateZ(100px);
     background: rgba(255,255,204, 0.5);
 }
 
 #back-cube1 
 {
-    transform: translateX(-200px) translateY(-200px) translateZ(-200px);
+    transform: translateX(-100px) translateY(-100px) translateZ(-100px);
     background: rgba(255,255,153, 0.5);
 }
 
 #right-cube1 
 {
-    transform: translateY(-200px) rotateY(90deg);
+    transform: translateY(-100px) rotateY(90deg);
     background: rgba(255,255,102, 0.5);
 }
 
 #left-cube1 
 {
-    transform: translateY(-200px) translateX(-400px) rotateY(90deg);
+    transform: translateY(-100px) translateX(-200px) rotateY(90deg);
     background: rgba(255,255,51, 0.5);
 }
 
 #top-cube1 
 {
-    transform: translateX(-200px) translateY(-400px) rotateX(90deg);
+    transform: translateX(-100px) translateY(-200px) rotateX(90deg);
     background: rgba(255,255,0, 0.5);
 }
 
 #bottom-cube1 
 {
-    transform: translateX(-200px) rotateX(90deg);
+    transform: translateX(-100px) rotateX(90deg);
     background: rgba(204,204,0, 0.5);
 }
 
@@ -78,37 +78,37 @@
 
 #front-cube2
 {
-    transform: translateX(-200px) translateY(-200px) translateZ(200px);
+    transform: translateX(-100px) translateY(-100px) translateZ(100px);
     background: rgba(255,127,80, 0.5);
 }
 
 #back-cube2 
 {
-    transform: translateX(-200px) translateY(-200px) translateZ(-200px);
+    transform: translateX(-100px) translateY(-100px) translateZ(-100px);
     background: rgba(255,99,71, 0.5);
 }
 
 #right-cube2 
 {
-    transform: translateY(-200px) rotateY(90deg);
+    transform: translateY(-100px) rotateY(90deg);
     background: rgba(255,69,0, 0.5);
 }
 
 #left-cube2 
 {
-    transform: translateY(-200px) translateX(-400px) rotateY(90deg);
+    transform: translateY(-100px) translateX(-200px) rotateY(90deg);
     background: rgba(255,215,0, 0.5);
 }
 
 #top-cube2 
 {
-    transform: translateX(-200px) translateY(-400px) rotateX(90deg);
+    transform: translateX(-100px) translateY(-200px) rotateX(90deg);
     background: rgba255,140,0, 0.5);
 }
 
 #bottom-cube2 
 {
-    transform: translateX(-200px) rotateX(90deg);
+    transform: translateX(-100px) rotateX(90deg);
     background: rgba(255,165,0, 0.5);
 }
 
@@ -116,37 +116,37 @@
 
 #front-cube3
 {
-    transform: translateX(-200px) translateY(-200px) translateZ(200px);
+    transform: translateX(-100px) translateY(-100px) translateZ(100px);
     background: rgba(124,252,0, 0.5);
 }
 
 #back-cube3 
 {
-    transform: translateX(-200px) translateY(-200px) translateZ(-200px);
+    transform: translateX(-100px) translateY(-100px) translateZ(-100px);
     background: rgba(50,205,50, 0.5);
 }
 
 #right-cube3 
 {
-    transform: translateY(-200px) rotateY(90deg);
+    transform: translateY(-100px) rotateY(90deg);
     background: rgba(0,255,127, 0.5);
 }
 
 #left-cube3 
 {
-    transform: translateY(-200px) translateX(-400px) rotateY(90deg);
+    transform: translateY(-100px) translateX(-200px) rotateY(90deg);
     background: rgba(144,238,144, 0.5);
 }
 
 #top-cube3 
 {
-    transform: translateX(-200px) translateY(-400px) rotateX(90deg);
+    transform: translateX(-100px) translateY(-200px) rotateX(90deg);
     background: rgba(60,179,113, 0.5);
 }
 
 #bottom-cube3 
 {
-    transform: translateX(-200px) rotateX(90deg);
+    transform: translateX(-100px) rotateX(90deg);
     background: rgba(46,139,87, 0.5);
 }
 
@@ -154,36 +154,36 @@
 
 #front-cube4
 {
-    transform: translateX(-200px) translateY(-200px) translateZ(200px);
+    transform: translateX(-100px) translateY(-100px) translateZ(100px);
     background: rgba(176,224,230, 0.5);
 }
 
 #back-cube4 
 {
-    transform: translateX(-200px) translateY(-200px) translateZ(-200px);
+    transform: translateX(-100px) translateY(-100px) translateZ(-100px);
     background: rgba(0,191,255, 0.5);
 }
 
 #right-cube4 
 {
-    transform: translateY(-200px) rotateY(90deg);
+    transform: translateY(-100px) rotateY(90deg);
     background: rgba(100,149,237, 0.5);
 }
 
 #left-cube4 
 {
-    transform: translateY(-200px) translateX(-400px) rotateY(90deg);
+    transform: translateY(-100px) translateX(-200px) rotateY(90deg);
     background: rgba(106,90,205, 0.5);
 }
 
 #top-cube4 
 {
-    transform: translateX(-200px) translateY(-400px) rotateX(90deg);
+    transform: translateX(-100px) translateY(-200px) rotateX(90deg);
     background: rgba(0,0,255, 0.5);
 }
 
 #bottom-cube4 
 {
-    transform: translateX(-200px) rotateX(90deg);
+    transform: translateX(-100px) rotateX(90deg);
     background: rgba(0,0,128, 0.5);
 }
