@@ -1,0 +1,40 @@
+#taskBar 
+{  
+	height:50px;
+   	width:100%;
+
+   	position:absolute;
+   	bottom:0;
+
+   	background: rgba(0,0,0, 0.2); 
+}
+
+#startButton
+{  
+   width:180px;
+   height:100%;
+
+   position:absolute;
+   display: flex;
+   justify-content: center; /* align horizontal */
+   align-items: center; /* align vertical */
+
+   font-size: 1.3rem;
+     color: white;
+   background: rgba(138, 43, 226, 0.2); 
+}
+
+#time
+{  
+	width:120px;
+	height:100%;
+	float:right;
+	display: flex;
+	justify-content: center; /* align horizontal */
+	align-items: center; /* align vertical */
+
+	font-size: 1.3rem;
+	color: white;
+	background: rgba(138, 43, 226, 0.2); 
+}
+
