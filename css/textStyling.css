@@ -17,8 +17,10 @@ div.mainTitle p
 /* Background which will contain all the characters */
 #myContainer 
 {
-  width: 100vw ;
+  width: 100vw;
   height: 100vh ;
   position: relative;
   background: yellow;
 }
+
+

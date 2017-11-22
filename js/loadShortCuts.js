@@ -1,10 +1,37 @@
-var shortCutNames = ["Folder", "Terminal", "Resume"];
+var shortCutNames = ["Folder", "Resume", "Terminal"];
 var placeholder = "../img/shortCuts/placeHolder.png";
 var imageNames = [placeholder, placeholder, placeholder];
 $(window).load(function()
 {
 	addShortcuts();
+	addActionListeners();
 });
+
+function addActionListeners()
+{
+	for (var aShortCut = 0; aShortCut < shortCutNames.length; aShortCut++) 
+	{
+		var name = shortCutNames[aShortCut];
+		document.getElementById('shortCut'+name).onclick = function() {
+			switch(name)
+			{
+				case "Folder":
+					alert(name);
+					break;
+				case "Terminal":
+					alert(name);
+					break;
+				case "Resume":
+					alert(name);
+					break;
+				default:
+					// Forgot to initialize?
+			}
+
+		};
+	}
+}
+
 function addShortcuts()
 {
 	var leftPadding = 182;

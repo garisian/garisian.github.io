@@ -10,5 +10,12 @@ $(window).load(function()
 		timeOfDay = "pm";
 		hours -= 12;
 	}
-	document.getElementById("time").innerHTML = hours+":"+mins+" "+timeOfDay;
+	if(mins < 10)
+	{
+		document.getElementById("time").innerHTML = hours+":0"+mins+" "+timeOfDay;
+	}
+	else
+	{
+		document.getElementById("time").innerHTML = hours+":"+mins+" "+timeOfDay;
+	}
 });

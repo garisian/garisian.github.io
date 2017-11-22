@@ -1,0 +1,10 @@
+#welcomeGreeting
+{	
+	color: blue;
+	height: 10vh;
+	width: 30vw;
+	display: flex;
+	justify-content: center;
+   	align-items: center; /* align vertical */
+	background-color: lightblue;
+}

@@ -14,23 +14,35 @@
         <link rel="stylesheet" type="text/css" href="css/textStyling.css">
         <link rel="stylesheet" type="text/css" href="css/cubeRotation.css">
         <link rel="stylesheet" type="text/css" href="css/taskMenu.css">
+        <link rel="stylesheet" type="text/css" href="css/greetingMessage.css">
 
         <!-- Javascript Links -->
         <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js'></script>
         <script type='text/javascript' src="js/displayCenterCube.js"></script>
         <script type='text/javascript' src="js/getTime.js"></script>
         <script type='text/javascript' src="js/loadShortCuts.js"></script>
+       <script type='text/javascript' src="js/loadDesktopIcons.js"></script>
+       <script type='text/javascript' src="js/welcomeGreeting.js"></script>
         <script src="http://code.jquery.com/jquery-latest.js"></script>
 
     </head>
 
     <body style="width: 100%; height:100%; background-color:#7FFFD4">
+        
+        <div id="welcomeGreeting">
+            WELCOME TO GARISIAN'S OS PORTFOLIO
+        </div>
+
+        <!-- Location where all the cubes will be injected -->
         <div id="cubeBackground">
-            <!-- Location where all the cubes will be injected -->
         </div>
        
+        <!-- Location where all the cubes shootingCubes will be injected -->
         <div id="shootingCubeBackground">
-            <!-- Location where all the cubes shootingCubes will be injected -->
+        </div>
+
+        <!-- Where all the desktop shortcuts are monitored -->
+        <div id="desktopIcons">
         </div>
 
         <!-- Taskbar that mimics that of an operating system -->
